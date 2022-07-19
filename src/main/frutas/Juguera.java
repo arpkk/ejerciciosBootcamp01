@@ -59,6 +59,13 @@ public class Juguera {
             return "Se acabo";
     }
 
+    public static void main(String[] args) {
+        Juguera juguera = new Juguera(500);
+        String respuesta = juguera.agregarFruta("Manzana",300);
+        respuesta= juguera.agregarFruta("Platano", 50);
+        System.out.println(juguera.beber(200));
+    }
+
     public int getN() {
         return n;
     }

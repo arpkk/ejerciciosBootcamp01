@@ -21,6 +21,22 @@ public class JugueraTest {
         String respuesta= juguera.agregarFruta("Manzana",200);
         String respuesta2= juguera.agregarFruta("Pera",300);
         boolean respuesta3= juguera.seRebalsa();
-        assertEquals(true,respuesta3);
+        assertEquals(false,respuesta3);
+    }
+
+    @Test
+    public void beberTest(){
+        Juguera juguera= new Juguera(500);
+        String respuesta = juguera.beber(500);
+        assertEquals("Se acabo",respuesta);
+    }
+
+    @Test
+    public void beberDosFrutas(){
+        Juguera juguera = new Juguera(500);
+        juguera.agregarFruta("Manzana",300);
+        juguera.agregarFruta("Platano", 50);
+        String respuesta=juguera.beber(200);
+        assertEquals("Me quedo 150.0 ml de jugo",respuesta);
     }
 }
