@@ -1,6 +1,6 @@
 package main.personas;
 
-abstract public class Persona {
+abstract public class Persona implements Printable {
     private int edad;
 
     public Persona(int edad){
